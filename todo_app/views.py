@@ -15,5 +15,4 @@ def index(request, id):
         'folders':folders,
         'tasks':tasks,
         'current_folder_id': current_folder.id,
-    })![Screenshot from 2020-04-17 11-03-21.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/370196/2effc6d9-ccd6-3485-3eaa-4dceb2ae76da.png)
-
+    })
