@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404#追加
+from django.shortcuts import render, get_object_or_404, redirect#redirect関数を追加
+from .forms import FolderForm
 from django.utils import timezone
 from .models import Folder, Task#追加
 
@@ -16,3 +17,15 @@ def index(request, id):
         'tasks':tasks,
         'current_folder_id': current_folder.id,
     })
+
+def create_folder(request):
+    if request.method == "POST":
+        form = FolderForm(request.POST)
+        if form.is_valid():
+            folder = form.save(commit=False)
+            folder.created_at = timezone.now()
+            folder.save()
+            return redirect('tasks.index', id=folder.id)
+    else:
+        form = FolderForm()
+    return render(request, 'create_folders.html', {'form': form})
