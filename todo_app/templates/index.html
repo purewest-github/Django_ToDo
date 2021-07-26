@@ -60,14 +60,16 @@
                     </span>
                                     </td>
                                     <td>{{ task.due_date }}</td>
-                                    <td><a href="{% url 'tasks.edit' id=current_folder_id task_id=task.id %}">編集</a></td>
+                                    <td>
+                                        <a href="{% url 'tasks.edit' id=current_folder_id task_id=task.id %}">編集</a>
+                                    </td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
                         </table>
-                        <div class="panel-body">
-                            <div class="text-right">
-                                <a href="{% url 'tasks.create' id=current_folder_id  %}" class="btn btn-default btn-block">
+                        <div class=" panel-body ">
+                            <div class="text-right ">
+                                <a href="{% url 'tasks.create' id=current_folder_id %} " class="btn btn-default btn-block ">
                 タスクを追加する
               </a>
                             </div>
