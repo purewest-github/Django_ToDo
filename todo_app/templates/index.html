@@ -67,9 +67,10 @@
                         </table>
                         <div class="panel-body">
                             <div class="text-right">
-                                <a href="#" class="btn btn-default btn-block">
-                              タスクを追加する
-                            </a>
+                                <a href="{% url 'tasks.create' id=current_folder
+                                _id %}" class="btn btn-default btn-block">
+                                    タスクを追加する
+                                </a>
                             </div>
                         </div>
                     </div>
