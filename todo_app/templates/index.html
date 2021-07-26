@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -19,6 +19,7 @@
         </nav>
     </header>
     <main>
+        {% block content %}
         <div class="container">
             <div class="row">
                 <div class="col col-md-4">
@@ -26,19 +27,18 @@
                         <div class="panel-heading">フォルダー</div>
                         <div class="list-group">
                             {% for folder in folders %}
-                            <a href="{% url 'tasks.index' id=folder.id %}" class="list-group-item {% if current_folder_id == folder.id %}active{% endif %}">
-                            {{ folder.title }}
-                            </a> {% endfor %}
+                            <a href="{% url 'tasks.index' id=folder.id %}" , class="list-group-item {% if current_folder_id == folder.id %}active{% endif %}" 　>
+              {{ folder.title }}
+            </a> {% endfor %}
                         </div>
                         <div class="panel-body">
                             <a href="{% url 'folders.create' %}" class="btn btn-default btn-block">
-                                フォルダーを追加する
-                            </a>
+              フォルダーを追加する
+            </a>
                         </div>
                     </nav>
                 </div>
                 <div class="column col-md-8">
-                    <!-- タスクはここに表示される -->
                     <div class="panel panel-default">
                         <div class="panel-heading">タスク</div>
                         <table class="table">
@@ -56,27 +56,27 @@
                                     <td>{{ task.title }}</td>
                                     <td>
                                         <span class="label {% if task.status == 1 %}label-danger{% endif %}{% if task.status == 2 %}label-info{% endif %}">
-                                  {{ task.get_status_display }}
-                                  </span>
+                    {{ task.get_status_display }}
+                    </span>
                                     </td>
                                     <td>{{ task.due_date }}</td>
-                                    <td><a href="#">編集</a></td>
+                                    <td><a href="{% url 'tasks.edit' id=current_folder_id task_id=task.id %}">編集</a></td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
                         </table>
                         <div class="panel-body">
                             <div class="text-right">
-                                <a href="{% url 'tasks.create' id=current_folder
-                                _id %}" class="btn btn-default btn-block">
-                                    タスクを追加する
-                                </a>
+                                <a href="{% url 'tasks.create' id=current_folder_id  %}" class="btn btn-default btn-block">
+                タスクを追加する
+              </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% endblock %}
     </main>
 </body>
 
