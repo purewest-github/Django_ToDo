@@ -1,5 +1,5 @@
 from django import forms
-from .models import Folder, Task#Taskモデルをインポート
+from .models import Folder, Task
 
 class FolderForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -12,7 +12,6 @@ class FolderForm(forms.ModelForm):
         model = Folder
         fields = ('title',)
         labels = {'title' : 'フォルダー名'}
-
 
 class TaskForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
