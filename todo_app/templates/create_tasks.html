@@ -17,14 +17,13 @@
             </nav>
         </div>
     </div>
-    <div>
-        {% endblock %} {% block scripts %}
-        <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
-        <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
-        <script>
-            flatpickr(document.getElementsByName('due_date'), {
-                locale: 'ja',
-                minDate: new Date()
-            });
-        </script>
-        {% endblock %}
+    {% endblock %} {% block scripts %}
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
+    <script>
+        flatpickr(document.getElementsByName('due_date'), {
+            locale: 'ja',
+            minDate: new Date()
+        });
+    </script>
+    {% endblock %}
