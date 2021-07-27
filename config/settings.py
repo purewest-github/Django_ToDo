@@ -37,10 +37,14 @@ SECRET_KEY = 'i35jt$pq^n@w53(l*7w^t93ndu*v8vyg%u1in++@*e_v-7@xhh'
 DEBUG = True
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['localhost']
 =======
 ALLOWED_HOSTS = []
 >>>>>>> 454c13bd336f8009c8f89e1fd080d908166add3d
+=======
+ALLOWED_HOSTS = ['localhost']
+>>>>>>> a43c8da11b7d61dc9023c4b6a2f308a734b97804
 
 
 # Application definition
@@ -53,9 +57,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'todo_app',
 =======
 >>>>>>> 454c13bd336f8009c8f89e1fd080d908166add3d
+=======
+    'todo_app',
+>>>>>>> a43c8da11b7d61dc9023c4b6a2f308a734b97804
 ]
 
 MIDDLEWARE = [
@@ -95,17 +103,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a43c8da11b7d61dc9023c4b6a2f308a734b97804
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'db',
         'PORT': 5432,
+<<<<<<< HEAD
     }
 }
 =======
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+=======
+>>>>>>> a43c8da11b7d61dc9023c4b6a2f308a734b97804
     }
 }
 
@@ -134,6 +148,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 LANGUAGE_CODE = 'ja'
 
 TIME_ZONE = 'Asia/Tokyo'
@@ -142,6 +157,11 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 >>>>>>> 454c13bd336f8009c8f89e1fd080d908166add3d
+=======
+LANGUAGE_CODE = 'ja'
+
+TIME_ZONE = 'Asia/Tokyo'
+>>>>>>> a43c8da11b7d61dc9023c4b6a2f308a734b97804
 
 USE_I18N = True
 

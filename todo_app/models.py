@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
@@ -26,3 +27,8 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
+=======
+from django.db import models
+
+# Create your models here.
+>>>>>>> a43c8da11b7d61dc9023c4b6a2f308a734b97804
