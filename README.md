@@ -40,10 +40,11 @@
     中途半端な説明の記事も多いと思った
 
 ## アプリの起動・確認方法
-1. データベースの作成\
-``` docker-compose run web python3 manage.py migrate ```
-1. イメージの構築、コンテナの構築・起動\
-``` docker-compose up --build ```
+1. それぞれのバッチファイルを実行
+    - MacOS X・Linux\
+    ``` build ```
+    - Windows\
+    ``` build.bat ```
 1. フォルダーを１つ以上、作成してから使用する\
 [フォルダ作成ページ](http://localhost:8000/folders/create)
 
