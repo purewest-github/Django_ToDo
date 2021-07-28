@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('folders/', include('todo_app.urls')),
+]
+=======
 """config URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -14,9 +23,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('folders/', include('todo_app.urls')),
 ]
+>>>>>>> 454c13bd336f8009c8f89e1fd080d908166add3d

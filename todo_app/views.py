@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404, redirect#redirect関数を追加
-from .forms import FolderForm, TaskForm#TaskFormをインポートする
+<<<<<<< HEAD
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .models import Folder, Task#追加
+from .models import Folder, Task
+from .forms import FolderForm, TaskForm
 
-# Create your views here.
 def index(request, id):
     #すべてのフォルダを取得する
     folders = Folder.objects.filter(created_at__lte=timezone.now()).order_by('created_at')
@@ -29,7 +29,6 @@ def create_folder(request):
     else:
         form = FolderForm()
     return render(request, 'create_folders.html', {'form': form})
-
 
 def create_task(request, id):
     #選ばれたフォルダを取得する
@@ -58,4 +57,8 @@ def edit_task(request, id, task_id):
     else:
         form = TaskForm(instance=task)
     return render(request, 'edit.html', {'form': form}, {'task':task})
-    
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> a43c8da11b7d61dc9023c4b6a2f308a734b97804
