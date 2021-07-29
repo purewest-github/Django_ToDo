@@ -24,6 +24,8 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['localhost']
+# 全てのネットワークからアクセスしたい場合は、こちらのコメントアウトを外して居使用する
+# ALLOWED_HOSTS = ['*']
 
 # Application definition
 
